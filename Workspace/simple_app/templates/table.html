@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Tabela{% endblock %}
+{% block page_content  %}
+{% block content %}
+<div class="navbar navbar-static-top">
+    <div class="container-fluid">
+        <a class="brand" href="#">
+            <div class="page-header">
+                <h1>Tabela
+                    <small>Wpisz dane</small>
+                </h1>
+            </div>
+        </a>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">Strona główna</a></li>
+            <li class="active"><a href="#">Pobierz dane</a></li>
+            <li class="disabled"><a href="#">Link</a></li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false"
+       aria-controls="collapseExample">
+        Link with href
+    </a>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2"
+            aria-expanded="false" aria-controls="collapseExample">
+        Button with data-target
+    </button>
+    <div class="collapse" id="collapseExample1">
+        <div class="well">
+            11111111
+        </div>
+    </div>
+    <div class="collapse" id="collapseExample2">
+        <div class="well">
+            22
+        </div>
+    </div>
+
+    <div id="myGroup">
+        <button class="btn dropdown" data-toggle="collapse" data-target="#keys" data-parent="#myGroup"><i
+                class="icon-chevron-right"></i> Keys <span class="badge badge-info pull-right">X</span></button>
+        <button class="btn dropdown" data-toggle="collapse" data-target="#attrs" data-parent="#myGroup"><i
+                class="icon-chevron-right"></i> Attributes
+        </button>
+        <button class="btn dropdown" data-toggle="collapse" data-target="#edit" data-parent="#myGroup"><i
+                class="icon-chevron-right"></i> Edit Details
+        </button>
+
+        <div class="accordion-group">
+            <div class="collapse indent" id="keys">
+                keys
+            </div>
+
+            <div class="collapse indent" id="attrs">
+                attrs
+            </div>
+
+            <div class="collapse" id="edit">
+                edit
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+{% endblock %}

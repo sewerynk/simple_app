@@ -1,0 +1,63 @@
+{% block doc -%}
+<!DOCTYPE html>
+<html ang="en">
+{% block html_attribs %}{% endblock html_attribs %}
+{%- block html %}
+<head>
+    {%- block head %}
+    <title>{% block title %}{{title|default}}{% endblock title %}</title>
+
+    {%- block metas %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%- endblock metas %}
+
+    {%- block styles %}
+    <
+    <link href="{{bootstrap_find_resource('css/bootstrap.css', cdn='bootstrap')}}" rel="stylesheet">
+    {%- endblock styles %}
+    {%- endblock head %}
+</head>
+<body>
+{% block body_attribs %}{% endblock body_attribs %}
+{% block body -%}
+<!-- Blok odpowiedzialny za stworzenie poczatkowego navbara, dane menu bedzie wyswietlane na kazdej stronie -->
+{% block navbar %}
+<div class="navbar navbar-default">
+    <div class="container">
+        <h1 class="bg-secondary">Program sterujacy</h1>
+        <h5>
+            <small class="text-left">Program sterujacy ukladami mikrofalowych wspolczynikow</small>
+        </h5>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active">
+                <a href="#">
+                    <i class="glyphicon glyphicon-home"></i>
+                </a>
+            </li>
+            <li role="presentation"><a href="/help">Pomoc</a></li>
+            <li role="presentation"><a href="/table">Ustawienia mikrokontrolerow</a></li>
+            <li role="presentation"><a href="/chart">Generuj wykres</a></li>
+            <li role="presentation"><a href="/load_data">Wczytaj dane</a></li>
+        </ul>
+    </div>
+</div>
+{%- endblock navbar %}
+<!--Stopka strony webowej, do dalszej implementacji -->
+<!--{% block footer -%}-->
+<!--<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>-->
+<!--{%- endblock footer %}-->
+{% block content %}
+<!-- NIE ZAPOMNIJ TEGO DODAC BARANIE!-->
+{%- endblock content %}
+<!--Blok odpowiedzialny za wprowadzenie jezyka skryptowego do dokumentu html-->
+{% block scripts %}
+<script src="{{bootstrap_find_resource('jquery.js', cdn='jquery')}}"></script>
+<script src="{{bootstrap_find_resource('js/bootstrap.js', cdn='bootstrap')}}"></script>
+{%- endblock scripts %}
+{%- endblock body %}
+</body>
+{%- endblock html %}
+</html>
+{% endblock doc -%}
+
+
