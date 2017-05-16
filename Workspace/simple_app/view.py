@@ -31,5 +31,10 @@ def load_data():
     return render_template('load_data.html')
 
 
+@app.route('/send_data')
+def send_data():
+    return render_template('send_data.html')
+
+
 if __name__ == '__main__':
     app.run()

@@ -1,26 +1,117 @@
+
 {% extends "table.html" %}
 {% block title %}Send_Data{% endblock %}
-{% block page_content  %}
 {% block content %}
-<div class="container">
-    <h1>Spis Tresci</h1>
-    <div class="bs-example" data-example-id="body-copy">
-        <p>The error vector magnitude or EVM (sometimes also called receive constellation error or RCE)
-            is a measure used to quantify the performance of a digital radio transmitter or receiver. A signal sent by
-            an ideal transmitter or received by a receiver would have all constellation points precisely at the ideal
-            locations, however various imperfections in the implementation (such as carrier leakage, low image rejection
-            ratio, phase noise etc.) cause the actual constellation points to deviate from the ideal locations.
-            Informally, EVM is a measure of how far the points are from the ideal locations.
-            Noise, distortion, spurious signals, and phase noise all degrade EVM, and therefore
-            EVM provides a comprehensive measure of the quality of the radio receiver or transmitter for use in digital
-            communications.
-            Transmitter EVM can be measured by specialized equipment, which demodulates the received
-            signal in a similar way to how a real radio demodulator does it.
-            One of the stages in a typical phase-shift keying demodulation process produces a
-            stream of I-Q points which can be used as a reasonably reliable estimate for the ideal transmitted signal in
-            EVM calculation.
-        </p>
+<div class="navbar navbar-static-top">
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="/table">Wybór dostepnych modułów</a></li>
+            <li class="active"><a href="/send_data">Wpisz oraz wyslij wartosc</a></li>
+        </ul>
+        <hr>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <p>Modul 1</p>
+                <select class="selectpicker form-control" tabindex="-98">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </select>
+            </div>
+            <div class="col-xs-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Wybór parametru - Tlumienie, Faza
+                    </div>
+                    <div class="panel-body">
+                        <label for="select0">Wybierz wielkosc</label>
+                        <select id="select0" class="selectpicker form-control" tabindex="-98">
+                            <option>Tlumienie</option>
+                            <option>Faza</option>
+                        </select>
+                        <h4><input type="text" class="form-control"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <p>Modul 2</p>
+                <select class="selectpicker form-control" tabindex="-98">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </select>
+            </div>
+            <div class="col-xs-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Wybór parametru - Tlumienie, Faza
+                    </div>
+                    <div class="panel-body">
+                        <label for="select1">Wybierz wielkosc</label>
+                        <select id="select1" class="selectpicker form-control" tabindex="-98">
+                            <option>Tlumienie</option>
+                            <option>Fazy</option>
+                        </select>
+                        <h4><input type="text" class="form-control"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <p>Modul 3</p>
+                <select class="selectpicker form-control" tabindex="-98">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </select>
+            </div>
+            <div class="col-xs-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Wybór parametru - Tlumienie, Faza
+                    </div>
+                    <div class="panel-body">
+                        <label for="select2">Wybierz wielkosc</label>
+                        <select id="select2" class="selectpicker form-control" tabindex="-98">
+                            <option>Tlumienie</option>
+                            <option>Fazy</option>
+                        </select>
+                        <h4><input type="text" class="form-control"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <p>Modul 4</p>
+                <select class="selectpicker form-control" tabindex="-98">
+                    <option>Mustard</option>
+                    <option>Ketchup</option>
+                    <option>Relish</option>
+                </select>
+            </div>
+            <div class="col-xs-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        WWybór parametru - Tlumienie, Faza
+                    </div>
+                    <div class="panel-body">
+                        <label for="select3">Wybierz wielkosc</label>
+                        <select id="select3" class="selectpicker form-control" tabindex="-98">
+                            <option>Tlumienie</option>
+                            <option>Fazy</option>
+                        </select>
+                        <h4><input type="text" class="form-control"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-{% endblock %}
 {% endblock %}
