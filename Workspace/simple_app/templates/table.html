@@ -4,18 +4,20 @@
 {% block content %}
 <div class="navbar navbar-static-top">
     <div class="container">
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="/table">Wybór dostepnych modułów</a></li>
-            <li class="active"><a href="/send_data">Wpisz oraz wyslij wartosc</a></li>
+        <ul>
+            <li class="btn btn-default active"><a href="/table">Wybór dostepnych modułów</a></li>
+            <li class="btn btn-default"><a href="/send_data">Wpisz oraz wyslij wartosc</a></li>
         </ul>
-        <hr>
-        <h5>
-            <p align="justify">
-            Poniżej znajduje się zestaw pięciu bloków, w którym należy wybrać po jednym module tłumika oraz przesuwnika fazy.
-            Wyboru dokonujemy poprzez wybranie danego modułu z listy wybieralnej.
+
+        <div class="row">
+             <div class="well">
+                <p align="justify">
+                Poniżej znajduje się zestaw pięciu bloków, w którym należy wybrać po jednym module tłumika oraz przesuwnika fazy.
+                Wyboru dokonujemy poprzez wybranie danego modułu z listy wybieralnej.
             </p>
-        </h5>
-        <hr>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-xs-6">
                 <div class="panel panel-info">
@@ -24,47 +26,42 @@
                     </div>
                     <div class="panel-body">
                         <label>Moduł tłumika programowalnego</label>
-                        <form class="form-inline" method="POST" action="{{ url_for('table') }}">
-                            <select class="selectpicker form-control" tabindex="-98" name="select_module">
-                                {% for o in atten %}
-                                <option value="{{ o.name }}">{{ o.name }}</option>
-                                {% endfor %}
-                            </select>
-                            <button type="submit" class="btn btn-default">Zatwierdz</button>
-                        </form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <form class="form-inline" method="GET" action="{{ url_for('get_atten') }}">
+                                    <select class="selectpicker form-control" tabindex="-98">
+                                        {% for o in atten %}
+                                        <option value="{{ atten[o] }}">{{ atten[o] }}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <button type="submit" class="btn btn-default"> Pokaż wartość</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     <div class="panel-body">
                         <label>Moduł przesuwnika fazy</label>
-                        <form class="form-inline" method="POST" action="{{ url_for('table') }}">
-                            <select class="selectpicker form-control" tabindex="-98" name="select_module">
-                                {% for o in shifter %}
-                                <option value="{{ o.name }}">{{ o.name }}</option>
-                                {% endfor %}
-                            </select>
-                            <button type="submit" class="btn btn-default">Zatwierdz</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        Wybrana wartosc tlumienia lub fazy
-                    </div>
-                    <div class="panel-body">
-                        <label for="select0">Wybierz wartosc</label>
-                        <select id="select0" class="selectpicker form-control" tabindex="-98">
-                            <option>Tlumienie</option>
-                            <option>Faza</option>
-                        </select>
-                        <h4><span class="label label-info">Wartosc zwrocna z selecta</span></h4>
-                    </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <form class="form-inline" method="GET" action="{{ url_for('get_shifter') }}">
+                                    <select class="selectpicker form-control" tabindex="-98">
+                                        {% for o in shifter %}
+                                        <option value="{{ shifter[o] }}">{{ shifter[o] }}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <button type="submit" class="btn btn-default">Pokaż wartość</button>
+                                </form>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="btn btn-default">
+                                    Wartość fazy <span class="badge">323</span>
+                                </div>
 
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <hr>
-        <div class="row">
             <div class="col-xs-6">
                 <div class="panel panel-info">
                     <div class="panel-heading">
@@ -88,23 +85,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        Wybrana wartosc tlumienia lub fazy
-                    </div>
-                    <div class="panel-body">
-                        <label for="select1">Wybierz wartosc</label>
-                        <select id="select1" class="selectpicker form-control" tabindex="-98">
-                            <option>Tlumienie</option>
-                            <option>Faza</option>
-                        </select>
-                        <h4><span class="label label-info">Wartosc zwrocna z selecta</span></h4>
-                    </div>
-
-                </div>
-            </div>
         </div>
+        <hr>
         <hr>
         <div class="row">
             <div class="col-xs-6">
