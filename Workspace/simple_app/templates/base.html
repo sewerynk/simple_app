@@ -37,7 +37,7 @@
         </h2>
         <h3 class="brand brand-name navbar-center text-center">
             <a class="portal-title">
-                <p class="text-muted">Politechnika Wrocławska - Wydzial Elektroniki EKA </p>
+                <p class="text-muted">Politechnika Wrocławska - Wydział Elektroniki EKA </p>
             </a>
         </h3>
         <!-- Wyswietlanie zdjec slajdow i innych pierdol -->
@@ -87,10 +87,10 @@
                     <i class="glyphicon glyphicon-home"></i>
                 </a>
             </li>
-            <li role="presentation"><a href="/help">Ustawienia modułów</a></li>
-            <li role="presentation"><a href="/table">Tablica wartości</a></li>
-            <li role="presentation"><a href="/chart">Genrator charakterystyki układu</a></li>
-            <li role="presentation"><a href="/load_data">Wczytaj/Zapisz</a></li>
+            <!--<li role="presentation"><a href="/help">Ustawienia modułów</a></li>-->
+            <li role="presentation"><a href="/table">Kalibracja modułów stanowiska pomiarowego</a></li>
+            <li role="presentation"><a href="/chart">Charakterystyka promieniowania układu</a></li>
+            <!--<li role="presentation"><a href="/load_data">Wczytaj/Zapisz</a></li>-->
         </ul>
     </div>
 </div>
@@ -109,7 +109,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 {%- endblock scripts %}
 {%- endblock body %}
 </body>

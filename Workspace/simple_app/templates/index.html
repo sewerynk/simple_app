@@ -4,149 +4,57 @@
 {% block content %}
 <div class="container fluid">
     <h2>
-        <small>Aplikacja sterująca układem elementów mikrofalowych</small>
+        <small>Aplikacja Sterowania układem Systemu Antenowego </small>
     </h2>
     <h5>
-        <small>Aplikacja która pozwala kształtować charakterystykę promieniowania anteny</small>
+        <small>Program sterujący układem syntezy wspołczynników pobudzenia systemu antenowego</small>
     </h5>
     <div class="bs-example" data-example-id="body-copy">
         <p>
-        <ol>
-            <li><a href="#index1">Sens działania aplikacji</a></li>
-            <li><a href="#index2">Sposób wyboru elementów mikrofalowych</a></li>
-            <li><a href="#index3">Import oraz eksport danych</a></li>
-            <li><a href="#index4">Algorytm układu syntezy anteny wykorzystany w danej aplikacji</a></li>
-            <li><a href="#index5">Generowanie charakterystyki promieniowania anteny (symulacja)</a></li>
-        </ol>
+            <ol>
+                <li><a href="#index1">Układ sterowania</a></li>
+                <li><a href="#index2">Cyfrowy tłumik programowalny</a></li>
+                <li><a href="#index3">Cyfrowy przesuwnik fazy</a></li>
+                <li><a href="#index4">Sterowanie układem elementów w celu wygenerowania zadanej charakterystyki promieniowania</a></li>
+            </ol>
         </p>
         <hr>
-        <div class="conteiner fluid">
-            <p id="index1">
-                W sumie na disiaj tyle ile mozna klepac kodu. Cum sociis natoque penatibus et magnis dis parturient
-                montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
-                vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
-            </p>
-            <p id="index2">
-                Etiam porta sem malesuada magna mollis euismod.
+            <div class="conteiner fluid">
+                <p id="index1" align="justify">
+                   Aplikacja służy do sterowania układem przełaczników mikrofalowych celem wygenerowania zadanej charakterystyki promieniowania układu antenowego.
+                    Sterowanie układami odbywa się poprzez inicjalizjację elementów układu z aplikacją w zakładce "Kalibracja modułów stanowiska pomiarowego".
+                    W danej sekcji, wybór elementów oraz kalibracja układu stanowiska pomiarowego. Do wyboru mamy <mark>2 różnego rodzaju moduły</mark>:
+                    <ul>
+                        <li>Cyfrowy tłumik programowalny</li>
+                        <li>Cyfrowy przesuwnik fazy</li>
+                    </ul>
+                </p>
+                <p id="index2" align="justify">
+                <h4>Cyfrowy moduł tłumika programowalnego</h4>
+                    <img alt="" src="/static/img/digital-attenuator.jpg" align="left" style="margin: 0px 20px 0px 0px">
+                    Moduł tłumika programowalnego firmy Vaunix oferuje kalibracje wartości tłumienia w zakresie do 20 GHz. Sterowanie modułami odbywa się poprzez wymiane danych w satnardzie USB.
+                    Moduł pozwala na pracę z sygnałem wejsciowym o maksymalnej mocy 1 W. Używany model oferuję pracę w zakresie od 400 do 6000 MHz, dynamiką nastawy 63 dB oraz krokiem 0,5 dB.
+                    Aby uzyskać więcej informacji na temat produktu, należy zwrócić się <a href="http://vaunix.com/products/digital-attenuators/overview/">tutaj.</a>
+                </p>
+                <hr>
+                <p id="index3" align="justify">
+                <h4>Cyfrowy moduł przesuwnika fazy</h4>
+                    <img alt="" src="/static/img/phase-shifters.jpg" align="left" style="margin: 0px 20px 0px 0px">
+                    Cyfrowy moduł przesuwnika fazy oferuje zmianę wartości fazy w stopniach. Przesuwnik fazowy tak samo jak moduł tłumika wymienie dane korzystając z protokołu USB.
+                    Dysponując pamięcią wewnętrzną układ zapisuje obecny stan dzięki czemu przy przywróceniu zasilania układ znajduje się w tym samym stanie fazowym. Model LPS-802 oferuje
+                zmianę wartości w zakresie 360 stopni z krokiem 1 stopia. Dany model może pracować w zakresie od 4 do 8 GHz. Po więcej informacji wystarczy kilknąć
+                <a href="http://vaunix.com/products/phase-shifters/overview/">tutaj.</a>
+                </p>
+            </div>
+            <div class="container">
+                <p id="index4">
+                <h4>Charakterystyka promieniowania układu antenowego </h4>
 
-
-                Cras mattis consectetur purus sit amet fermentum.
-
-
-                Aenean lacinia bibendum nulla sed consectetur.
-
-                Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
-            </p>
-            <p id="index3">
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-
-                Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.
-
-
-                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit
-                amet risus.
-            </p>
-            <p id="index4">
-                Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.
-                Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula.
-                Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim.
-                hasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna.
-                Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum
-                adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, v
-                estibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non,
-                consectetuer lobortis quis, varius in, purus. Integer ultrices posuere cubilia Curae,
-                ulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat.
-                Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam
-                pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget,
-                bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
-                Aliquam sem. In hendrerit nulla quam nunc, accumsan congue.
-                Lorem ipsum primis in nibh vel risus. Sed vel lectus. Ut sagittis, ipsum dolor quam.
-            </p>
-            <p id="index5">
-                Drogi Marszałku, Wysoka Izbo.
-                PKB rośnie. Nie mówili prawdy.
-                W sumie skoordynowanie pracy obu urzędów powoduje docenianie wag kierunków postępowego wychowania.
-                Wagi i realizacji dalszych poczynań. Różnorakie i określenia form oddziaływania.
-                Pomijając fakt, że zakres i rozwijanie struktur pomaga w wypracowaniu nowych propozycji.
-                Wyższe założenie ideowe, a także rozpoczęcie powszechnej akcji kształtowania podstaw zabezpiecza
-                udział szerokiej grupie w restrukturyzacji przedsiębiorstwa. I staje się iż wzmocnienie i miejsce
-                szkolenia kadry odpowiadającego potrzebom. Do tej sprawy zmusza nas do tej decyzji skłonił mnie
-                fakt, że rozszerzenie naszej kompetencji w kształtowaniu kolejnych kroków
-            <p> Math
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>a</mi>
-                    <mo>&#x2260;</mo>
-                    <mn>0</mn>
-                </math>
-                ,
-                there are two solutions to
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <mi>a</mi>
-                    <msup>
-                        <mi>x</mi>
-                        <mn>2</mn>
-                    </msup>
-                    <mo>+</mo>
-                    <mi>b</mi>
-                    <mi>x</mi>
-                    <mo>+</mo>
-                    <mi>c</mi>
-                    <mo>=</mo>
-                    <mn>0</mn>
-                </math>
-                and they are
-                <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                    <mi>x</mi>
-                    <mo>=</mo>
-                    <mrow>
-                        <mfrac>
-                            <mrow>
-                                <mo>&#x2212;</mo>
-                                <mi>b</mi>
-                                <mo>&#x00B1;</mo>
-                                <msqrt>
-                                    <msup>
-                                        <mi>b</mi>
-                                        <mn>2</mn>
-                                    </msup>
-                                    <mo>&#x2212;</mo>
-                                    <mn>4</mn>
-                                    <mi>a</mi>
-                                    <mi>c</mi>
-                                </msqrt>
-                            </mrow>
-                            <mrow>
-                                <mn>2</mn>
-                                <mi>a</mi>
-                            </mrow>
-                        </mfrac>
-                    </mrow>
-                    <mtext>.</mtext>
-                </math>
-            </p>
-            w przygotowaniu i rozwijanie struktur koliduje z szerokim aktywem przedstawia
-            interpretującą próbę sprawdzenia odpowiednich warunków administracyjno-finansowych.
-            Takowe informacje są tajne, nie trzeba udowadniać, ponieważ zmiana przestarzałego
-            systemu powszechnego uczestnictwa. W ten sposób dokończenie aktualnych projektów wymaga
-            niezwykłej precyzji w kształtowaniu odpowiednich warunków administracyjno-finansowych.
-            Proszę państwa, zawiązanie koalicji jest to, że dalszy rozwój różnych form działalności
-            ukazuje nam efekt odpowiednich warunków administracyjno-finansowych.
-            Jednakże, inwestowanie w przygotowaniu i bogate doświadczenia pozwalają na uwadze, że
-            zakup nowego sprzętu zmusza nas do wniosku, iż zakończenie tego projektu spełnia istotną
-            rolę w kształtowaniu modelu rozwoju.
-            </p>
+                </p>
+            </div>
         </div>
     </div>
 </div>
 
-
-<!--<div class="container">-->
-<!--<div class="form-group">-->
-<!--<label for="exampleInputFile">File input</label>-->
-<!--<input type="file" id="exampleInputFile">-->
-<!--<p class="help-block">Example block-level help text here.</p>-->
-<!--</div>-->
-<!--</div>-->
 {% endblock %}
 {% endblock %}
